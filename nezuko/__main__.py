@@ -107,8 +107,8 @@ home_keyboard_pm = InlineKeyboardMarkup(
                 text="Commands ❓", callback_data="bot_commands"
             ),
             InlineKeyboardButton(
-                text="Repo ❤️",
-                url="https://github.com/rozari0/NezukoBot",
+                text="Group 👥",
+                url="https://t.me/mirror_gan",
             ),
         ],
         [
@@ -141,8 +141,8 @@ keyboard = InlineKeyboardMarkup(
                 url=f"t.me/{BOT_USERNAME}?start=help",
             ),
             InlineKeyboardButton(
-                text="Repo 🛠",
-                url="https://github.com/rozari0/NezukoBot",
+                text="Group 👥",
+                url="https://t.me/mirror_gan",
             ),
         ],
         [
