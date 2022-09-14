@@ -191,7 +191,7 @@ async def start(_, message):
     return
 
 
-@app.on_message(filters.command("help"))
+@app.on_message(filters.command("bantuan"))
 async def help_command(_, message):
     if message.chat.type != enums.ChatType.PRIVATE:
         if len(message.command) >= 2:
