@@ -156,14 +156,14 @@ async def url_detector(_, message):
     if user.id in (SUDOERS + (await list_admins(chat_id))):
         return
 
-    check = get_urls_from_text(text)
-    if check:
-        permissions = await current_chat_permissions(chat_id)
-        if "can_add_web_page_previews" not in permissions:
-            try:
-                await message.delete()
-            except Exception:
-                await message.reply_text(
-                    "This message contains a URL, "
-                    + "but i don't have enough permissions to delete it"
-                )
+#    check = get_urls_from_text(text)
+#    if check:
+#        permissions = await current_chat_permissions(chat_id)
+#        if "can_add_web_page_previews" not in permissions:
+#            try:
+#                await message.delete()
+#            except Exception:
+#                await message.reply_text(
+#                    "This message contains a URL, "
+#                    + "but i don't have enough permissions to delete it"
+#                )
