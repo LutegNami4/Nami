@@ -458,7 +458,7 @@ async def happy(client, message):
     return await m.delete()
 
 
-@app.on_message(filters.command("nsfw") & filters.group)
+@app.on_message(filters.command("deadnsfw") & filters.group)
 @adminsOnly("can_change_info")
 async def nsfw(client, message):
     if len(message.command) >= 2 and message.command[1].lower() == "on":
@@ -479,7 +479,7 @@ async def nsfw(client, message):
         return await message.reply_text("Usage: /nsfw [on/off]")
 
 
-@app.on_message(filters.command("nsfw") & filters.private)
+@app.on_message(filters.command("deadnsfw") & filters.private)
 async def nsfw(client, message):
     if len(message.command) >= 2 and message.command[1].lower() == "on":
         if await get_nsfw_status(message.chat.id) != False:
