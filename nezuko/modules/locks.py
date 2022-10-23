@@ -145,16 +145,16 @@ async def locktypes(_, message):
     await message.reply_text(perms)
 
 
-@app.on_message(filters.text & ~filters.private, group=69)
-async def url_detector(_, message):
-    user = message.from_user
-    chat_id = message.chat.id
-    text = message.text.lower().strip()
+#@app.on_message(filters.text & ~filters.private, group=69)
+#async def url_detector(_, message):
+#    user = message.from_user
+#    chat_id = message.chat.id
+#    text = message.text.lower().strip()
 
-    if not text or not user:
-        return
-    if user.id in (SUDOERS + (await list_admins(chat_id))):
-        return
+#    if not text or not user:
+#        return
+#    if user.id in (SUDOERS + (await list_admins(chat_id))):
+#        return
 
 #    check = get_urls_from_text(text)
 #    if check:
